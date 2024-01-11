@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 #scope Будет создаваться каждый раз экземпляр. т.е.браузер для каждого теста будет создаваться отдельно
 def driver (request):
     options = Options()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--no--sandbox")
     options.add_argument("--disable-dev-shm-usege")
     options.add_argument("--window-size=1920,1080")
