@@ -13,7 +13,6 @@ class BaseTest:
     dashboard_page: DashboardPage
     personal_page: PersonalPage
 
-
     @pytest.fixture(autouse=True)
     def setup(self, request, driver):
         request.cls.driver = driver
