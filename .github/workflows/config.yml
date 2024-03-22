@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   ui-tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest   #запуск на таком тот раннере(гит выделяет вирт.машину)
 
     steps:
       - uses: actions/checkout@v2

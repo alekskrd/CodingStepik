@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
   regression:
@@ -6,10 +6,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./:/usr/workspace
-    command: /bin/sh -c "ls -la && pytest -sv --alluredir=allure-results"
-    working_dir: /usr/workspace
+    volumes:  #связь контейнера с вашей репозиторий
+      - ./:/usr/workspace  # закмдываем всю тек.директорию(проект) в папку usr/workspace
+    command: /bin/sh -c "ls -la && pytest -sv --alluredir=allure-results"  #команды для запуска
+    working_dir: /usr/workspace  #на всякий случий нужно продублировать
     environment:
       - LOGIN=${LOGIN}
       - PASSWORD=${PASSWORD}
+        #/bin/sh -c

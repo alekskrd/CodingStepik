@@ -5,7 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-class BasePage:  # здесь будем инициализировать сам драйвер чтобы он был доступен на всех страницах. а также это общие методы для работы со всеми страницами
+class BasePage:  # здесь будем инициализировать сам драйвер чтобы он был доступен на всех страницах. а также это
+    # общие методы для работы со всеми страницами
 
     def __init__(self, driver):
         self.driver = driver
