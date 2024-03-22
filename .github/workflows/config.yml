@@ -1,6 +1,6 @@
 name: UI Tests
 
-on: workflow_dispatch
+on: workflow_dispatch    #по тригеру лучше запускать когда релизный сформировался и запустился
 
 jobs:
   ui-tests:

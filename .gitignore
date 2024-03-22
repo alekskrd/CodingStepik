@@ -2,5 +2,4 @@
 .idea
 *.iml
 .env
-report
 allure-results
