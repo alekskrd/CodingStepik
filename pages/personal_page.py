@@ -9,7 +9,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class PersonalPage(BasePage):
-
     PAGE_URL = Links.PERSONAL_PAGE
 
     FIRST_NAME_FIELD = ("xpath", "//input[@name='firstName']")
@@ -27,7 +26,6 @@ class PersonalPage(BasePage):
             first_name_field.send_keys(Keys.BACKSPACE)
             first_name_field.send_keys(new_name)
             self.name = new_name
-
 
     @allure.step("Save changes")
     def save_changes(self):
